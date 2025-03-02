@@ -18,11 +18,11 @@ if (reposParam) {
 </script>
 
 <template>
-    <UPage class="flex items-center justify-center h-screen">
+    <UPage class="flex flex-col gap-8 h-full items-center overflow-y-scroll py-24">
         <UContainer class="flex flex-col items-center justify-center gap-4 w-full" v-if="repos.length">
 
             <NuxtLink v-for="(r, idx) in repos" :key="idx" :to="r.link" target="_blank"
-                class="w-48 border border-orange-500 py-4 rounded hover:-translate-y-1">
+                class="w-48 border border-orange-500 py-4 rounded hover:-translate-y-1 hover:border-2">
                 <div class="flex justify-center items-center gap-1">
                     <UIcon name="i-mdi-github" class="w-5 h-5" />
                     {{ r.name }}
